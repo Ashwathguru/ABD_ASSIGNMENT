@@ -1,0 +1,5 @@
+--2. Sqoop the details into hdfs.
+
+sqoop import --connect jdbc:mysql://localhost/battingdb --username root --password cloudera --table batting --m 1;
+
+hadoop fs -cat /user/cloudera/batting/part-m-00000;

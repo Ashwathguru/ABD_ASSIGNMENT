@@ -1,0 +1,3 @@
+--3  Sqoop the details into hive.
+
+sqoop import --connect jdbc:mysql://localhost/battingdb --username root --password cloudera --table batting --m 1 --target-dir /HIVE --hive-import --create-hive-table --hive-table default.batting_table --m 1;
